@@ -6,7 +6,7 @@ import { loginUser, registerUser } from "../Controllers/auth.controller.js";
 const router = express.Router();
 
 //Admin: get all users
-router.get("/all", protect, adminOnly, getAllUsers);
+router.get("/", protect, adminOnly, getAllUsers);
 
 //Logged-in user or admin: get one user
 router.get("/:id", protect, getUserById);

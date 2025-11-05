@@ -15,7 +15,7 @@ const router = express.Router();
 router.post("/create", protect, createReport);       
 
 // Only admin sees all reports
-router.get("/all", protect, adminOnly, getAllReports); 
+router.get("/", getAllReports); 
 
 // Admin views just one report by id
 router.get("/:id", protect, getOneReport);

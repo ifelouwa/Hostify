@@ -7,7 +7,7 @@ import { handleValidation } from "../Middlewares/validator.middleware.js";
 const router = express.Router();
 
 router.post("/post", protect, feedbackValidator, handleValidation, createFeedback);
-router.get("/", protect, adminOnly, getAllFeedback);
+router.get("/", getAllFeedback);
 
 export default router;
 

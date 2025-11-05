@@ -7,7 +7,7 @@ import { handleValidation } from "../Middlewares/validator.middleware.js";
 const router = express.Router();
 
 router.post("/create", protect, orderValidator, handleValidation, createOrder);
-router.get("/all", protect, getallOrders);
+router.get("/", getallOrders);
 router.patch("/:id", protect, adminOnly, updateOrderStatus);
 
 export default router;
